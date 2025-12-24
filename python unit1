@@ -1,0 +1,270 @@
+# Python Numbers
+
+# THERE ARE THREE NUMERIC TYPES IN PYTHON:
+
+# int
+# float
+# complex
+
+#variables of numeric types are created when you assign a value to them:
+
+'''x = 1    # int
+y = 2.8  # float
+z = 1j   # complex
+
+print(type(x))
+print(type(y))
+print(type(z))'''
+
+#INTEGER
+
+#Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.
+
+#EXAMPLES:
+
+'''X=1
+Y=35656222554887711
+Z=-3255522
+
+print(type(X))
+print(type(Y))
+print(type(Z))'''
+
+#FLOAT
+#Float, or "floating point number" is a number, positive or negative, containing one or more decimals.
+
+#EXAMPLES:
+
+'''X=1.10
+Y=1.0
+Z=-35.59
+
+print(type(X))
+print(type(Y))
+print(type(Z))'''
+
+#COMPLEX
+#Complex numbers are written with a "j" as the imaginary part.
+
+#EXAMPLES:
+
+'''X=3+5j
+Y=5j
+Z=-3j
+
+print(type(X))
+print(type(Y))
+print(type(Z))'''
+
+#OPERATORS:operators are used to perform operations on variables and values.
+
+#PYTHON DIVIDES THE OPERATORS IN THE FOLLOWING GROUPS:
+
+#ARITHMETIC OPERATORS
+#ASSIGNMENT OPERATORS
+#COMPARISON OPERATORS
+#LOGICAL OPERATORS
+#IDENTITY OPERATORS
+#MEMBERSHIP OPERATORS
+#BITWISE OPERATORS
+
+#ARITHMETIC OPERATORS
+#Arithmetic operators are used with numeric values to perform common mathematical operations:
+
+# +  :  Addition  X+Y
+# -  :  Subtraction  X-Y
+# *  :  Multiplication  X*Y
+# /  :  Division  X/Y
+# %  :  Modulus  X%Y
+# ** :  Exponentiation  X**Y
+# // :  Floor division  X//Y
+
+#EXAMPLES:
+
+'''x = 12
+y = 14
+print(x + y)    #Addition
+print(x - y)    #Subtraction
+print(x * y)    #Multiplication
+print(x / y)    #Division
+print(x % y)    #Modulus
+print(x ** y)   #Exponentiation 
+print(x // y)   #Floor division it returns the largest integer less than or equal to the division of the two numbers'''
+
+#ASSIGNMENT OPERATORS
+#Assignment operators are used to assign values to variables:
+
+# =      x = 5         x = 5
+# +=     x += 3        x = x + 3
+# -=     x -= 3        x = x - 3
+# *=     x *= 3        x = x * 3
+# /=     x /= 3        x = x / 3
+# %=     x %= 3        x = x % 3
+# //=    x //= 3       x = x // 3
+# **=    x **= 3       x = x ** 3
+# &=     x &= 3        x = x & 3
+# |=     x |= 3        x = x | 3
+# ^=     x ^= 3        x = x ^ 3
+# >>=    x >>= 3       x = x >> 3
+# <<=    x <<= 3       x = x << 3
+
+#EXAMPLES:
+'''x = 5
+x += 3
+print(x)'''  #Output: 8
+'''y = 10
+y -= 4
+print(y)'''  #Output: 6
+'''z = 6
+z *= 2
+print(z)'''  #Output: 12
+'''a = 15
+a /= 3
+print(a)'''  #Output: 5.0
+'''b = 14
+b %= 5
+print(b)'''  #Output: 4
+'''c = 2
+c **= 3
+print(c)'''  #Output: 8
+'''d = 17
+d //= 3
+print(d)'''  #Output: 5
+'''e = 5
+e &= 3
+print(e)'''  #Output: 1
+'''f = 5
+f |= 3
+print(f)'''  #Output: 7
+'''g = 5
+g ^= 3
+print(g)'''  #Output: 6
+'''h = 8
+h >>= 2
+print(h)'''  #Output: 2
+'''i = 2
+i <<= 2
+print(i)'''  #Output: 8
+
+#COMPARISON OPERATORS
+#Comparison operators are used to compare two values:
+
+# ==  :  Equal            x == y
+# !=  :  Not equal        x != y
+# >   :  Greater than     x > y
+# <   :  Less than        x < y
+# >=  :  Greater than or equal to   x >= y
+# <=  :  Less than or equal to      x <= y
+
+#EXAMPLES:
+
+'''a=4
+b=1
+
+print(a == b)   #Equal         Output: False
+print(a != b)   #Not equal     Output: True
+print(a > b)    #Greater than  Output: True
+print(a < b)    #Less than     Output: False
+print(a >= b)   #Greater than or equal to   Output: True
+print(a <= b)   #Less than or equal to      Output: False'''
+
+#LOGICAL OPERATORS
+#Logical operators are used to combine conditional statements:
+
+# and  :  Returns True if both statements are true   
+# or   :  Returns True if one of the statements is true
+# not  :  Reverse the result, returns False if the result is true
+
+#EXAMPLES:
+
+'''a=6
+b=8
+
+print(a > 3 and b < 5)   #and   Output: true
+print(a > 3 or b < 5)    #or    Output: true
+print(not(a > 3 and b < 5))  #not   Output: false'''
+
+#IDENTITY OPERATORS
+#Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location:
+
+# is     :  Returns True if both variables are the same object
+# is not :  Returns True if both variables are not the same object
+
+#EXAMPLES:
+'''x = ["apple", "banana"]
+y = x
+z = ["apple", "banana"]
+print(x is y)      #is      Output: True
+print(x is z)      #is      Output: False
+print(x is not z)  #is not  Output: True'''
+
+#MEMBERSHIP OPERATORS
+#Membership operators are used to test if a sequence is presented in an object:
+
+# in     :  Returns True if a sequence with the specified value is present in the object
+# not in :  Returns True if a sequence with the specified value is not present in the object
+
+#EXAMPLES:
+
+'''x = ["apple", "banana"]
+print("banana" in x)      #in      Output: True
+print("pineapple" not in x)  #not in  Output: True'''
+
+#BITWISE OPERATORS
+#Bitwise operators are used to compare (binary) numbers:
+
+# &  :  AND      Sets each bit to 1 if both bits are 1
+# |  :  OR       Sets each bit to 1 if one of two bits is 1
+# ^  :  XOR      Sets each bit to 1 if only one of two bits is 1
+# ~  :  NOT      Inverts all the bits
+# << :  Zero fill left shift   Shift left by pushing zeros in from the right and let the leftmost bits fall off
+# >> :  Signed right shift      Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
+
+#EXAMPLES:
+
+'''a=2
+b=7
+
+print(a & b)   #AND               Output: 2
+print(a | b)   #OR                Output: 7
+print(a ^ b)   #XOR               Output: 5
+print(~a)      #NOT               Output: -3
+print(a << 2)  #Zero fill left shift   Output: 8
+print(b >> 2)  #Signed right shift      Output: 1'''
+
+#SOME PROGRAMS FOR BETTER UNDERSTANDING BASIC OF PYTHON PROGRAMMING:
+
+#1. ADDITION OF TWO NUMBERS
+
+'''a=int(input("Enter first number: "))
+b=int(input("Enter second number: "))
+c=a+b
+
+print("The sum is:",c)'''
+
+#2. SWAPPING OF TWO NUMBERS
+'''x=int(input("Enter first number: "))
+y=int(input("Enter second number: "))
+temp=x
+x=y
+y=temp
+print("After swapping:")
+print("First number:",x)
+print("Second number:",y)'''
+
+#3. SIMPLE INTEREST CALCULATION
+'''P=float(input("Enter principal amount: "))
+R=float(input("Enter rate of interest: "))
+T=float(input("Enter time in years: "))
+SI=(P*R*T)/100
+print("Simple Interest is:",SI)'''
+
+#4. AREA OF CIRCLE
+'''radius=float(input("Enter radius of circle: "))
+area=3.14*radius*radius
+print("Area of circle is:",area)'''
+
+#5. CONVERT CELSIUS TO FAHRENHEIT:
+'''celsius=float(input("Enter temperature in Celsius: "))
+fahrenheit=(celsius*9/5)+32
+print("Temperature in Fahrenheit is:",fahrenheit)'''
