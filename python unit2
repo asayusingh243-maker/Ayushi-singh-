@@ -1,0 +1,302 @@
+#1.if Statement:
+
+'''a = 10
+if a>5:
+    print("a is greater than 5")'''
+
+#2.if-else statement :
+
+'''a=4
+if a>5:
+    print("a is greater than 5")
+else:
+    print("a is not greater than 5")'''
+
+#3.Nested if-else Statement:
+
+'''marks=float(input("Enter your marks: "))
+if marks>=75:
+    print("GRADE A")
+elif marks>=60:
+    print("GRADE B")
+elif marks>=50:
+    print("GRADE C")
+else:
+    print("FAILED!")'''
+
+# for loop:
+
+'''for i in range(5):
+    print("Hello World")'''
+
+# while loop:
+
+'''count=0
+while count<5:
+    print("Hello World")
+    count+=1'''
+
+# nested for loop:
+
+'''for i in range(1,9,2):
+    for j in range(i):
+
+         print(i,end=" ")
+         print()'''
+
+# nested while loop:
+'''count=1
+while count<=5:
+    inner_count=1
+    while inner_count<=count:
+        print(count,end=" ")
+        inner_count+=1
+    print()
+    count+=1'''
+
+# break statement:
+'''for i in range(10):
+    if i==5:
+        break
+    print(i)'''
+
+# continue statement:
+
+'''for i in range(10):
+    if i==5:
+        continue
+    print(i)'''
+
+# pass statement:
+
+'''for i in range(5):
+    pass
+print("This is pass statement example")'''
+
+# SOME MORE EXAMPLES INCLUDING FOR AND WHILE LOOPS:
+
+# Example 1: Write a program to sum the digits of a number
+
+'''num=int(input("Enter a number: "))
+total=0
+
+while num>0:
+    digit=num%10
+    total+=digit
+    num=num//10
+print("Sum of digits:",total)'''
+
+# Example 2: Write a program to calculate the factorial of a number:
+
+'''num=int(input("Enter a number: "))
+factorial=1
+while num>0:
+    factorial*=num
+    num-=1
+print("Factorial of num is:",factorial)'''
+
+# Example 3: Write a program to print the multiplication table of a number:
+
+'''num=int(input("Enter a number: "))
+for i in range(1,11):
+    print(num,"x",i,"=",num*i)'''
+
+# Example 4: Write a program to find the largest element in a list:
+'''numbers=[34,67,23,89,2,45]
+largest=numbers[0]
+for num in numbers:
+    if num>largest:
+        largest=num
+print("Largest element is:",largest)'''
+
+# Example 5: Write a program to print a fibonacci series :;
+'''n=int(input("Enter the number of terms: "))
+a,b=0,1
+print(a,b,end=" ")
+while n-2>0:
+    c=a+b
+    print(c,end=" ")
+    a=b
+    b=c
+    n-=1'''
+
+# Example 6: Write a program to check if a number is prime or not:
+
+'''num=int(input("Enter a number: "))
+is_prime=True
+if num<=1:
+    is_prime=False
+else:
+    for i in range(2,num):
+        if num%i==0:
+            is_prime=False
+            break
+if is_prime:
+    print(num,"is a prime number")
+else:
+    print(num,"is not a prime number")'''
+
+# Example 7: Write a program to print all even numbers in a given range:
+
+'''start=int(input("Enter the starting number: "))
+end=int(input("Enter the ending number: "))
+print("Even numbers between",start,"and",end,":")
+for num in range(start,end+1):
+    if num%2==0:
+        print(num,end=" ")'''
+
+# Example 8: Write a program to check if a number is palindrome or not:
+
+'''num=int(input("Enter a number: "))
+original_num=num
+reversed_num=0
+while num>0:
+    digit=num%10
+    reversed_num=reversed_num*10+digit
+    num=num//10
+if original_num==reversed_num:
+    print(original_num,"is a palindrome number")
+else:
+    print(original_num,"is not a palindrome number")'''
+
+# Example 9: Write a program to check if a year is a leap year or not:
+
+'''year=int(input("Enter a year: "))
+if (year%4==0 and year%100!=0) or (year%400==0):
+    print(year,"is a leap year")
+else:
+    print(year,"is not a leap year")'''
+
+# Example 10: Write a program to check if a given number is Armstrong number or not:
+
+'''num=int(input("Enter a number: "))
+original_num=num
+sum_of_cubes=0
+while num>0:
+    digit=num%10
+    sum_of_cubes+=digit**3
+    num=num//10
+if original_num==sum_of_cubes:
+    print(original_num,"is an Armstrong number")
+else:
+    print(original_num,"is not an Armstrong number")'''
+
+# Example 11: Write a program to print the first n natural numbers:
+
+'''n=int(input("Enter a number: "))
+print("First",n,"natural numbers are:")
+for i in range(1,n+1):
+    print(i,end=" ")'''
+
+# Example 12: Write a program to check if a number is even or odd:
+
+'''num=int(input("Enter a number: "))
+if num%2==0:
+    print(num,"is an even number")
+else:
+    print(num,"is an odd number")'''
+
+# Example 13: Write a program to check if the entered character is a alphabet or not:
+
+'''char=input("Enter a character: ")
+if (char>='a' and char<='z') or (char>='A' and char<='Z'):
+    print(char,"is an alphabet")
+else:
+    print(char,"is not an alphabet")'''
+
+# SOME MORE EXAMPLES FOR PATTERN PRINTING:
+
+# Example 1: Print a right-angled triangle pattern:
+
+'''n=int(input("Enter the number of rows: "))
+for i in range(1,n+1):
+    for j in range(i):
+        print("*",end=" ")
+    print()'''
+
+# Example 2: Print a inverted right-angled triangle pattern:
+
+'''n=int(input("Enter the number of rows: "))
+for i in range(n,0,-1):
+    for j in range(i):
+        print("*",end=" ")
+    print()'''
+
+# Example 3: Print a pyramid pattern:
+
+'''n=int(input("Enter the number of rows: "))
+for i in range(1,n+1):
+    print(" "*(n-i),end="")
+    for j in range(2*i-1):
+        print("*",end="")
+    print()'''
+
+# Example 4: Print a diamond pattern:
+
+'''n=int(input("Enter the number of rows: "))
+for i in range(1,n+1):
+    print(" "*(n-i),end="")
+    for j in range(2*i-1):
+        print("*",end="")
+    print()
+for i in range(n-1,0,-1):
+    print(" "*(n-i),end="")
+    for j in range(2*i-1):
+        print("*",end="")
+    print()'''
+
+# Example 5: Print a hollow square pattern:
+
+'''n=int(input("Enter the size of the square: "))
+for i in range(n):
+    for j in range(n):
+        if i==0 or i==n-1 or j==0 or j==n-1:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()'''
+
+# Example 6: Print a hollow right-angled triangle pattern:
+
+'''n=int(input("Enter the number of rows: "))
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        if j==1 or j==i or i==n:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()'''
+
+# Example 7: Print a star pattern with increasing and decreasing stars:
+
+'''n=int(input("Enter the number of rows: "))
+for i in range(1,n+1):
+    for j in range(i):
+        print("*",end=" ")
+    print()
+for i in range(n-1,0,-1):
+    for j in range(i):
+        print("*",end=" ")
+    print()'''
+
+# Example 8: Print a number pyramid pattern:
+
+'''n=int(input("Enter the number of rows: "))
+for i in range(1,n+1):
+    print(" "*(n-i),end="")
+    for j in range(1,i+1):
+        print(j,end=" ")
+    print()'''
+
+# Example 9: Print a star using inverted triangle and triangle:
+'''n=int(input("Enter the number of rows: "))
+for i in range(n,0,-1):
+    print(" "*(n-i),end="")
+    for j in range(2*i-1):
+        print("*",end="")
+    print()
+for i in range(1,n+1):
+    print(" "*(n-i),end="")
+    for j in range(2*i-1):
+        print("*",end="")
+    print()'''
