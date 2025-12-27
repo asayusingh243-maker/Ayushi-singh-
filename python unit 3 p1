@@ -1,0 +1,378 @@
+# STRINGS IN PYTHON: strings are the sequence of characters enclose withi single quotes,double quotes or tripple quotes
+
+# EXAMPLE:
+
+#str1="Hello World"
+#print(str1)
+#str='Hello World'
+#print(str)
+#str2='''Hello World'''
+#print(str2)
+
+#STRING INDEXING: we can access the characters of the string by using indexing, index starts from 0 to n-1 where n is the length of the string.
+#STRING INDEXING IS OF TWO TYPES: POSITIVE INDEXING AND NEGATIVE INDEXING
+#POSITIVE INDEXING: in positive indexing the index starts from 0 to n-1
+#NEGATIVE INDEXING: in negative indexing the index starts from -1 to -n where -1 represents the last character of the string and -n represents the first character of the string.
+
+#EXAMPLE:
+
+'''str1="Hello World"
+print(str1[0])  #H
+print(str1[4])  #o
+print(str1[-1]) #d
+print(str1[-5]) #W'''
+
+#STRING SLICING: we can access a substring from the string by using slice operator[],we may use : operator to extract a substring from the string.
+#SYNTAX: string_name[start_index:end_index] or substring=variable_name[start_index:end_index]
+# here start_index is the starting index of the substring and end_index is the ending index of the substring(excluding the character at end_index) i.e.the index after the desired slice index
+# we can also use step parameter in slicing
+# SYNTAX: string_name[start_index:end_index:step]
+
+# EXAMPLE:
+
+'''str1="Hello World"
+print(str1[0:5])  #Hello
+print(str1[6:11]) #World
+print(str1[0:11:2]) #HloWrd
+print(str1[:5])  #Hello
+print(str1[6:])  #World
+print(str1[:])   #Hello World
+print(str1[::2]) #HloWrd
+print(str1[::-1]) #dlroW olleH
+print(str1[-1:-6:-1]) #dlroW'''
+# in the above example if we don't provide start_index it will consider it as 0 and if we don't provide end_index it will consider it as n where n is the length of the string
+# if we don't provide step it will consider it as 1
+# if we provide negative step it will reverse the string
+
+#STRING METHODS: strings have many built-in methods that we can use to perform various operations on strings.
+
+# STRING OPERATORS:
+
+# 1. CONCATENATION OPERATOR(+): we can concatenate two or more strings using + operator.
+
+'''str1="Hello"
+str2="World"
+str3=str1+" "+str2
+print(str3) #Hello World'''
+
+# 2. REPEATATION OPERATOR(*): we can repeat a string multiple times using * operator.
+
+'''str1="Hello "
+str2=str1*3
+print(str2) #Hello Hello Hello '''
+
+# 3. MEMBERSHIP OPERATOR(in, not in): we can check whether a substring is present in a string or not using in and not in operators.
+
+'''str1="Hello World"
+print("Hello" in str1)  #True
+print("Python" not in str1) #True'''
+
+# 4. ESCAPE SEQUENCES: we can use escape sequences to represent special characters in a string.
+
+# EXAMPLE:
+
+#str1="Hello World"       
+#print(str1)             
+#str2="Hello\tWorld"         # returns Hello    World
+#print(str2)
+#str3="He said, \"Hello World\""   # returns He said, "Hello World"
+#print(str3)
+#str4='It\'s a beautiful day'  # returns It's a beautiful day
+#print(str4)
+#str5="C:\\Users\\Username"    # returns C:\Users\Username
+#print(str5)         
+
+# 5. r/R PREFIX: we can use r or R prefix before a string to treat it as a raw string, which means that escape sequences will not be processed.
+
+# EXAMPLE:
+
+#str1=r"Hello\tWorld"
+#print(str1)  # returns Hello\tWorld
+#str2=R"C:\Users\Username"
+#print(str2)  # returns C:\Users\Username
+
+# 6. % FORMATTING: we can use % operator to format strings by inserting values into a string.
+
+# EXAMPLE:
+
+'''name="John"
+age=25
+str1="My name is %s and I am %d years old." % (name, age)
+print(str1)  # returns My name is John and I am 25 years old.
+'''
+
+# PYTHON MODIFYING STRINGS: strings are immutable in python, which means that we cannot modify a string once it is created. However, we can create a new string by modifying the existing string using various string methods.
+
+# 1. UPPER(): we can convert a string to uppercase using upper() method.
+'''str1="Hello World"
+print(str1.upper()) #HELLO WORLD'''
+
+# 2. LOWER(): we can convert a string to lowercase using lower() method.
+'''str1="Hello World"
+print(str1.lower()) #hello world'''
+
+# 3. STRIP(): we can remove the leading and trailing whitespaces from a string using strip() method.
+'''str1="   Hello World   "
+print(str1.strip()) #Hello World'''
+
+# 4. REPLACE(): we can replace a substring with another substring using replace() method.
+'''str1="Hello World"
+print(str1.replace("W","P")) #Hello Python'''
+
+# 5. SPLIT(): we can split a string into a list of substrings using split() method.
+'''str1="Hello World"
+print(str1.split()) #['Hello', 'World']
+# by default split() method splits the string by whitespace, we can also provide a delimiter to split the string.
+str2="Hello,World,Python"
+print(str2.split(",")) #['Hello', 'World', 'Python']'''
+
+# METHODS OF PYTHON STRINGS:
+
+#1.capitalize(): converts the first character of the string to uppercase and the rest to lowercase.
+'''
+str1="hello world"
+print(str1.capitalize())  #Hello world
+
+#2.casefold(): converts the string to lowercase for case-insensitive comparisons.
+str2="HELLO WORLD"
+print(str2.casefold())    #hello world
+
+#3.center(): centers the string within a specified width by padding it with spaces.
+str3="Hello"
+print(str3.center(20))    #       Hello
+
+#4.count(): counts the occurrences of a substring in the string.
+str4="Hello World Hello"
+print(str4.count("Hello"))  #2
+
+#5.encode(): encodes the string into bytes using a specified encoding.
+str5="Hello World"
+print(str5.encode("utf-8"))  #b'Hello World'
+
+#6.endswith(): checks if the string ends with a specified suffix.
+str6="Hello World"
+print(str6.endswith("World"))  #True
+
+#7.Expandtabs(): replaces tab characters with spaces.
+str7="Hello\tWorld"
+print(str7.expandtabs(4))  #Hello    World
+
+#8.find(): returns the index of the first occurrence of a substring in the string.
+str8="Hello World"
+print(str8.find("World"))  #6
+
+#9.format(): formats the string by replacing placeholders with specified values.
+str9="My name is {} and I am {} years old."
+print(str9.format("John", 25))  #My name is John and I am 25 years old.
+
+#10.format_map(): formats the string using a mapping (dictionary) to replace placeholders with corresponding values.
+str10="My name is {name} and I am {age} years old."
+data={"name":"John","age":25}
+print(str10.format_map(data))  #My name is John and I am 25 years old.
+
+#11.index(): returns the index of the first occurrence of a substring in the string. Raises an error if the substring is not found.
+str11="Hello World"
+print(str11.index("World"))  #6
+
+#12.isalnum(): checks if all characters in the string are alphanumeric (letters and numbers).
+str12="Hello123"
+print(str12.isalnum())  #True
+
+#13.isalpha(): checks if all characters in the string are alphabetic (letters only).
+str13="Hello"
+print(str13.isalpha())  #True
+
+#14.isdecimal(): checks if all characters in the string are decimal digits.
+str14="12345"
+print(str14.isdecimal())  #True
+
+#15.isdigit(): checks if all characters in the string are digits.
+a="12345"
+print(a.isdigit())  #True
+
+#16.isidentifier(): checks if the string is a valid identifier (variable name).
+b="Hello_World"
+print(b.isidentifier())  #True
+
+#17.islower(): checks if all characters in the string are lowercase.
+c="hello world"
+print(c.islower())  #True
+
+#18.isnumeric(): checks if all characters in the string are numeric.
+d="12345"
+print(d.isnumeric())  #True
+
+#19.isprintable(): checks if all characters in the string are printable.
+e="Hello World"
+print(e.isprintable())  #True
+
+#20.isspace(): checks if all characters in the string are whitespace.
+f="   "
+print(f.isspace())  #True
+
+#21.istitle(): checks if the string is in title case (first letter of each word is uppercase).
+g="Hello World"
+print(g.istitle())  #True
+
+#22.isupper(): checks if all characters in the string are uppercase.
+h="HELLO WORLD"
+print(h.isupper())  #True
+
+#23.join(): joins the elements of an iterable (e.g., list, tuple) into a single string using the specified string as a separator.
+i=["Hello", "World", "Python"]
+print("*".join(i))  #Hello*World*Python
+
+#24.ljust(): left-justifies the string within a specified width by padding it with spaces.
+j="Hello"
+print(j.ljust(20,"-"))  #Hello---------------
+
+#25.lower(): converts the string to lowercase.
+k="HELLO WORLD"
+print(k.lower())  #hello world
+
+#26.lstrip(): removes leading whitespaces from the string.
+l="   Hello World   "
+print(l.lstrip())  #Hello World
+
+#27.maketrans(x,[y],[z]): creates a translation table for use with the translate() method. 
+m="Hello World"
+print(m.maketrans("H","J"))  #{72: 74}
+
+#28.partition(): splits the string into three parts based on the first occurrence of a specified separator.
+n="Hello World Hello"
+print(n.partition("World"))  #('Hello ', 'World', ' Hello')
+
+#29.replace(): replaces occurrences of a specified substring with another substring.
+o="Hello World"
+print(o.replace("World","Python"))  #Hello Python
+
+#30.rfind(): returns the index of the last occurrence of a substring in the string.
+mango="I like mango and mango is my favorite fruit"
+print(mango.rfind("mango"))  #16
+
+#31.rindex(): returns the index of the last occurrence of a substring in the string. Raises an error if the substring is not found.
+fruit="I like fruit and fruit is my favorite fruit"
+print(fruit.rindex("fruit"))  #26
+
+#32.rjust(): right-justifies the string within a specified width by padding it with spaces.
+apple="Apple"
+print(apple.rjust(20,"-"))  #---------------Apple
+
+#33.rstrip(): removes trailing whitespaces from the string.
+banana="   Banana   "
+print(banana.rstrip())  #   Banana
+
+#34.rpartition(): splits the string into three parts based on the last occurrence of a specified separator.
+grape="I like grape and grape is my favorite fruit"
+print(grape.rpartition("grape"))  #('I like grape and ', 'grape', ' is my favorite fruit')
+
+#35.rsplit(): splits the string into a list of substrings from the right based on a specified separator.
+orange="I like orange,orange is my favorite fruit"
+print(orange.rsplit(",",1))  #['I like orange', 'orange is my favorite fruit']
+
+#36.rstrip(): removes trailing whitespaces from the string.
+peach="   Peach   "
+print(peach.rstrip())  #   Peach
+
+#37.splitlines(): splits the string into a list of lines based on line breaks.
+text="Hello World\nWelcome to Python\nEnjoy coding"
+print(text.splitlines())  #['Hello World', 'Welcome to Python', 'Enjoy coding']
+
+#38.startswith(): checks if the string starts with a specified prefix.
+text2="Hello World"
+print(text2.startswith("Hello"))  #True
+
+#39.strip(): removes leading and trailing whitespaces from the string.
+text3="   Hello World   "
+print(text3.strip())  #Hello World
+
+#40.swapcase(): swaps the case of each character in the string (uppercase to lowercase and vice versa).
+wine="Hello World"
+print(wine.swapcase())  #hELLO wORLD
+
+#41.title(): converts the string to title case (first letter of each word is uppercase).
+city="hello world"
+print(city.title())  #Hello World
+
+#42.translate(): translates the string using a translation table created by maketrans() method.
+wiskey="Hello World"
+table=wiskey.maketrans("H","J")
+print(wiskey.translate(table))  #Jello World
+
+#43.upper(): converts the string to uppercase.
+tea="hello world"
+print(tea.upper())  #HELLO WORLD
+
+#44.zfill(): pads the string with leading zeros to a specified width.
+Rupees="100"
+print(Rupees.zfill(10))  '''
+
+# ESCAPE SEQUENCES IN PYTHON STRINGS:
+# Escape sequences are special characters that are used to represent certain characters in a string. They are preceded by a backslash (\) and have a specific meaning.
+
+# Some common escape sequences in Python strings are:
+
+# \newline : it ignores the newline 
+# \t : represents a tab
+# \\ : represents a backslash
+# \' : represents a single quote
+# \\" : represents a double quote
+# \r : helps to create a raw string
+# \a : represents a bell sound
+# \b : represents a backspace
+# \f : represents a form feed
+# \v : represents a vertical tab
+# \ooo : represents a character with octal value ooo
+# \xhh : represents a character with hexadecimal value hh
+#\n : represents a newline
+
+# EXAMPLE:
+'''
+str1="Hello \newline World"
+print(str1)  
+str2="Hello\tWorld"
+print(str2)
+str3="He said, \"Hello World\""
+print(str3)
+str4='It\'s a beautiful day'
+print(str4)
+str5="C:\\Users\\Username"
+print(str5)
+str6="Hello\nWorld"
+print(str6)
+str7="Hello\bWorld"
+print(str7)
+str8="Hello\fWorld"
+print(str8)
+str9="Hello\vWorld"
+print(str9)
+str10="Hello\x48World"
+print(str10)
+str11="Hello\101World"
+print(str11)
+str12="Hello\rWorld"
+print(str12)
+str13="Hello\aWorld"
+print(str13)
+str14="Hello\\World"
+print(str14)
+'''
+# Output:
+# Hello \newline World
+# Hello	World
+# He said, "Hello World"
+# It's a beautiful day
+# C:\Users\Username
+# Hello
+# World
+# HelloWorld
+# Hello
+# World
+# Hello
+# World
+# HelloHWorld
+# HelloAWorld
+# World
+# HelloWorld
+# Hello\World
+# Note: Some escape sequences may not produce visible effects in certain environments (e.g., \a for bell sound).
