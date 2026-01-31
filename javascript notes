@@ -1,0 +1,348 @@
+// 1.ways to print in java script
+//console.log("hello world");
+//alert("me");
+// document.write("this is my first java script document");
+
+// 2. javascript console API
+//console.log("hello world",4+6,"another log");
+// console.warn("this is a warning");
+//console.error("this is an error");
+
+// 3. javascript variables
+// what are variables? = containers to store data values
+
+/*
+// multi 
+// line 
+// Comment
+*/
+var number1 = 34;
+var number2 = 56;
+// console.log(number1+number2);
+
+// 4. Data types in javascript
+// Strings
+var str1 = "This is a string";
+var str2 = 'This is also a string';
+//  Numbers
+var num1 = 456;
+var num2 = 34.05;
+// Objects 
+var marks = {
+    ravi: 34,
+    shubham: 78,
+    vaishnavi: 89.55,
+}
+// console.log(marks);
+//Booleans
+// var a = true;
+//var b = false;
+// console.log(a,b);
+
+// Undefined or Null 
+// var und = undefined;
+var und;
+console.log(und);
+
+var n = null;
+// console.log(n);
+
+// At a very high level , there are two types of data types in javascript
+// 1. Primitive data types: undefined, null, number, string, boolean, symbol
+// 2. Reference data types: Arrays and Objects
+var arr = [1, 2, 3, "ayushi", 4, 5];
+// console.log(arr);
+
+//  Operators in javascript
+// Arithmetic operators
+var a = 67;
+var b = 45;
+// console.log("The value of a+b:", a+b);
+// console.log("The value of a-b:", a-b);
+// console.log("The value of a*b:", a*b);
+// console.log("The value of a/b:", a/b);
+
+// Assignment Operators 
+var c = b;
+// c+= 2;
+// c*=4;
+//c/=2;
+// c-=2;//c=c-2
+// console.log(c);
+
+// Comparission Operators
+var x = 34;
+var y = 56;
+// console.log(x==y);
+// console.log(x>=y);
+// console.log(x<=y);
+
+// Logical Operators
+//logical And
+/*
+  console.log(true && true);  //true
+  console.log(true && false);  // false
+  console.log(false && false); //false
+  console.log(false && true);  // false
+*/
+//Logical Or
+/*
+  console.log(true||  true);  // T
+  console.log(true || false);  // T
+  console.log(false || false); // false
+  console.log(false || true); // T 
+  */
+//Logical Not
+//console.log( !  true);  // F
+//console.log( !false);  // T
+
+// Functions in java script
+// Function wrks on' DRY = don't repeat yourself ' principle
+function avg(a, b) {
+    return (a + b) / 2;
+}
+c = avg(4, 6);
+//console.log(c);
+function mul(a, b) {
+    return (a * b) / 2;
+}
+c1 = mul(3, 6);
+function div(a, b) {
+    return (a / b);
+}
+c2 = div(4, 2);
+// console.log(c1,c2);
+
+// Conditionals in java Script
+var age = 34;
+//single if statement
+//    if(age >18){
+//     console.log("you are not a kid");
+//    }
+// if else statement
+//if(age >18){
+//     console.log("you are not a kid");
+//    }
+//    else{
+//     console.log("you are a kid");
+//    }
+// if-else ladder
+/*
+if (age>32)
+{
+    console.log("you are not a kid");  // if 1 condition is true then it will execute only 1 condn
+}
+else if(age>25)
+{
+    console.log("you are  not a kid anymore");
+}
+else if (age >56)
+{
+    console.log(" you are an adult now");
+}
+else{
+    console.log("you are a kid");
+}
+console.log("end of ladder");
+*/
+// Loops in javascript
+// For loop
+var arr = [1, 2, 3, 4, 5, 6, 7];  // iiterate array elements using for loop
+// console.log(arr);
+//for (var i = 0; i < arr.length; i++) {
+// console.log(arr[i]);
+//}
+//arr.forEach(function(element){  // another way to iterate array elements
+// console.log(element);
+//})
+
+//while loop
+let j = 0;    //let is used cuz its wrk is only for a particular fn after that it will be useless(tempo blocks bante h)
+//const ac = 0; // const is used for fixed values
+//ac = ac + 1; // it will throw an error(ac=ac++will also throw the error)
+/*
+while (j < arr.length) {
+    console.log(arr[j]);
+    j++;
+}
+*/
+// do while loop
+/*
+do{
+    console.log(arr[j]);
+    j++;
+}while(j<arr.length)
+*/
+
+// Break and continue statement in javascript
+// break statement
+/*
+for(var i=0;i<arr.length;i++){
+    if(i==2){
+        break;
+    }
+    console.log(arr[i]);
+}
+    */
+// continue statement
+/*
+for(var i=0;i,arr.length;i++){  
+    if(i=2);
+    continue;    //skips only that particular index and continues the loop
+}
+*/
+/*
+let myarr =["fan","camera",45,null,true];
+// array methods
+console.log(myarr.length);
+myarr.pop();  // removes last element of an array
+console.log(myarr);
+myarr.push("ayushi"); // adds an element at last of an array
+myarr.shift(); // removes first element of an array
+console.log(myarr);
+myarr.unshift("ayushi"); // adds an element at first of an array
+console.log(myarr);
+let newlen = myarr.unshift("ayushi"); // returns the length of an array after adding an element at first of an array
+console.log(newlen);
+console.log(myarr);
+myarr.toString(); // converts an array to a string
+console.log(myarr);
+myarr.sort();
+console.log(myarr); // sorts the array in alphabetical order
+let arr1 = [1, 4, 3, 6, 8, 5];
+arr1.sort();
+console.log(arr1); // sorts the array in alphabetical order not in numerical order
+let arr2 = [1, 4, 3, 6, 8, 5];
+arr2.sort(function(a, b){return a-b});
+console.log(arr2); // sorts the array in numerical order
+let arr3 = [1, 4, 3, 6, 8, 5];
+arr3.sort(function(a, b){return b-a});
+console.log(arr3); // sorts the array in descending order
+*/
+// string methods in java script
+/*
+let mystring="ayushi is a good girl and ayushi is a good dancer";
+// console.log(mystring.length); // returns the length of a string
+// console.log(mystring.indexOf("ayushi")) // returns the index of the first occurrence of a string
+// console.log(mystring.lastIndexOf("good")) // returns the index of the last occurrence of a string
+console.log(mystring.slice(0,5)) // returns the string from index 0 to 5
+console.log(mystring.replace("ayushi","kavya")) // replaces the first occurrence of a string with another string
+console.log(mystring.replaceAll("ayushi","kavya")) // replaces all the occurrence of a string with another string
+console.log(mystring.toUpperCase()) // converts the string to uppercase
+console.log(mystring.toLowerCase()) // converts the string to lowercase
+console.log(mystring.concat(" and she is a good student")) // concatenates two strings
+console.log(mystring) // original string remains the same because strings are immutable in javascript
+console.log(mystring.trim()) // removes the whitespace from both ends of a string(if there is any space in starting or ending it will remove it but not in between the string )
+console.log(mystring.charAt(3)) // returns the character at the specified index(3rd index ka character return krega)
+console.log(mystring.split(" ")) // splits the string into an array of strings based on the specified separator(space ko chodkre split krdega)
+console.log(mystring.split("a")) // splits the string into an array of strings based on the specified separator(a ko chodkre split krdega)
+ console.log(mystring.split("")) // splits the string into an array of characters(every single element will convert into the string)*/
+
+// javascript date and time
+/*
+let myDate = new Date();
+console.log(myDate);
+console.log(myDate.getTime()); // returns the number of milliseconds since January 1, 1970 
+console.log(myDate.getFullYear()); // returns the year
+console.log(myDate.getDay()); // returns the day of the week (0-6) 0 means sunday
+console.log(myDate.getMinutes()); // returns the minutes
+console.log(myDate.getHours()); // returns the hours*/
+
+// DOM manipulation in javascript
+
+let elem = document.getElementById('Click');
+/*
+console.log(elem);
+
+let elemclass = document.getElementsByClassName("container");
+console.log(elemclass);
+//elemclass[0].style.background = "pink"; // changes the background color of the first element of the class container to pink
+//elemclass[0].style.borderColor ="purple"; // changes the border color of the first element of the class container to purple
+elemclass[0].classList.add("bg-primary"); // adds the class bg-primary to the first element of the class container
+elemclass[0].classList.add("text-success"); // adds the class text-success to the first element of the class container
+elemclass[0].classList.remove("text-success"); // removes the class text-success from the first element of the class container
+console.log(elemclass[0].innerHTML); // returns the inner HTML of the first element of the class container
+console.log(elemclass[0].innerText); // returns the outer HTML of the first element of the class container
+//elem.innerText = "Hello Ayushi"; // changes the inner text of the first element of the class container to Hello Ayushi*/
+let tn =document.getElementsByTagName('div');
+//console.log(tn);
+//createdElement = document.createElement('p'); // creates a new paragraph element
+//createdElement.innerText = "This is a created para"; // adds text to the created paragraph element
+//tn[0].appendchild(createdElement); // appends the created paragraph element to the first div element
+// createdElement2 = document.createElement('Z');// creates a new element
+// createdElement2.innerText = "This is a created para2"; // adds text to the created paragraph element
+// tn[0].replaceChild(createdElement2, createdElement); // replaces the created paragraph element with the created element
+//removeChild(element); // removes the specified element
+
+// Selecting using Query
+sel = document.querySelector('container'); // selects the first element of the class container
+//console.log(sel);
+sel = document.querySelectorAll('container'); // selects all the elements of the class container
+//console.log(sel);
+
+// Events in javascript
+/*
+function clicked(){
+    console.log("the button was clicked");
+}
+window.onload = function(){
+    console.log("the document was loaded");
+}
+firstcontainer.addEventListener('click',function(){
+    document.querySelectorAll('.container')[1].innerHTML="<b> we have clicked</b>"
+    console.log("clicked on container");
+})
+// firstcontainer.addEventListener('click',function(){
+//     console.log("clicked on container");
+// })
+// firstcontainer.addEventListener('mouseover',function(){
+//     console.log("mouse on container");
+// })
+// firstcontainer.addEventListener('mouseout',function(){
+//     console.log("mouse out of container");
+// })
+let prevHTML = document.querySelectorAll('.container')[1].innerHTML;
+ firstcontainer.addEventListener('mouseup',function(){
+     document.querySelectorAll('.container')[1].innerHTML=prevHTML;
+         console.log("mouse up when clicked on container");
+ })
+firstcontainer.addEventListener('mousedown',function(){
+    document.querySelectorAll('.container')[1].innerHTML="<b> we have clicked</b>"
+     console.log("mouse down when clicked on container");
+ })*/
+
+//Arrow functions 
+// function summ(a,b){
+//     return a+b;
+// }
+summ = (a,b)=>{   // another way to write a function
+    return a+b;
+}
+//logkaro = ()=>{
+    //document.querySelectorAll('.container')[1].innerHTML="<b>Set interval fired</b>"
+    //console.log("I am your log")};
+// SetTimeout and SetInterval
+//setTimeout(logkaro,2000); // calls the function logkaro after 2 seconds(use clearTimeout to stop it)
+//clr = setInterval(logkaro,2000); // to stop it use Interval(clr);
+
+// Javascript local storage
+//IT IS USED TO SAVE DATA IN THE USER'S COMPUTER AS A STRING
+// localStorage.setItem('name','ayushi'); // to set an item in the local storage
+// localStorage
+// localStorage.getItem('name'); // to get an item from the local storage
+// localStorage.removeItem('name'); // to remove an item from the local storage
+// localStorage.clear(); // to clear the local storage
+
+// Json 
+// Json = JavaScript Object Notation  // a valid json string is always written double quotes
+// It is a data format used to store and exchange data
+// Obj = {name: "ayushi", length: 1, a: {this: 'that'}, isActive: true}; 
+//jso = JSON.stringify(Obj); // converts a javascript object to a json string
+// console.log(typeof jso)
+//console.log(jso);
+// parsed = JSON.parse(`{"name":"ayushi","length":1,"a":{"this":"that"},"isActive":true}`); // converts a json string to a javascript object
+// console.log(parsed);
+
+// Template literals - Backticks
+a = 43;
+console.log(`this is my ${a}`); // use backticks (`) instead of single or double quotes to use template literals
