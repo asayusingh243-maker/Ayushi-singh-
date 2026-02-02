@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html><html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #edf393;
+            margin: 0;
+        }
+
+        .clock {
+            width: 300px;
+            height: 300px;
+            border: 20px solid rgb(225, 148, 85);
+            border-radius: 50%;
+            position: relative;
+            padding: 20px;
+            box-shadow: 0 0 20px #37b25433;
+            background: rgb(131, 71, 191);
+        }
+
+        .clock-face {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-3px); 
+        }
+
+        .hand {
+            width: 50%;
+            background: rgb(156, 10, 139);
+            position: absolute;
+            top: 50%;
+            transform-origin: 100%;
+            transform: rotate(90deg);
+            transition: all 0.05s;
+            transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+        }
+
+        .hour-hand { height: 7px; }
+        .minute-hand { height: 4px; }
+        .second-hand { height: 2px; background: rgb(34, 197, 88); }
+
+        .number {
+            position: absolute;
+            font-size: 24px;
+            transform: translate(-50%, -50%);
+        }
+
+        .number1  { top: 10%; left: 75%; }
+        .number2  { top: 25%; left: 92%; }
+        .number3  { top: 47%; left: 97%; }
+        .number4  { top: 69%; left: 92%; }
+        .number5  { top: 90%; left: 75%; }
+        .number6  { top: 100%; left: 50%; }
+        .number7  { top: 89%; left: 22%; }
+        .number8  { top: 70%; left: 8%; }
+        .number9  { top: 47%; left: 3%; }
+        .number10 { top: 28%; left: 7%; }
+        .number11 { top: 11%; left: 22%; }
+        .number12 { top: 0%; left: 50%; }
+    </style>
+    <style>
+    /* Style for the clock container */
+    #digitalClock {
+        position: fixed;
+        bottom: 120px;
+        right: 789px;
+        background-color: rgba(121, 22, 146, 0.8);
+        color: #bde812;
+        font-family: 'Courier New', monospace;
+        font-size: 20px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(222, 61, 61, 0.5);
+        z-index: 9999;
+    }
+</style>
+</head>
+<body>
+
+<!-- Clock Display -->
+<div id="digitalClock">00:00:00</div>
+
+<script>
+    // Function to update the clock every second
+    function updateClock() {
+        const now = new Date();
+        let hours = String(now.getHours()).padStart(2, '0');
+        let minutes = String(now.getMinutes()).padStart(2, '0');
+        let seconds = String(now.getSeconds()).padStart(2, '0');
+        
+        document.getElementById('digitalClock').textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    // Initial call and interval setup
+    updateClock(); // Show immediately
+    setInterval(updateClock, 1000); // Update every second
+</script>
+</head>
+<body>
+    <div class="clock">
+        <div class="clock-face">
+            <div class="number number1">1</div>
+            <div class="number number2">2</div>
+            <div class="number number3">3</div>
+            <div class="number number4">4</div>
+            <div class="number number5">5</div>
+            <div class="number number6">6</div>
+            <div class="number number7">7</div>
+            <div class="number number8">8</div>
+            <div class="number number9">9</div>
+            <div class="number number10">10</div>
+            <div class="number number11">11</div>
+            <div class="number number12">12</div>
+            <div class="hand hour-hand" id="hour-hand"></div>
+            <div class="hand minute-hand" id="minute-hand"></div>
+            <div class="hand second-hand" id="second-hand"></div>
+
+            <div style="width: 16px; height: 16px;
+             background: rgb(202, 234, 87); border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10;"></div>
+        </div>
+    </div>
+    <script>
+    function setClock() {
+    const now = new Date();
+    const seconds = now.getSeconds();
+    const minutes = now.getMinutes();
+    const hours = now.getHours();
+
+    const secondDeg = ((seconds / 60) * 360) + 90;
+    const minuteDeg = ((minutes / 60) * 360) + 90;
+    const hourDeg = ((hours / 12) * 360) + 90;
+
+    document.getElementById("second-hand").style.transform = `rotate(${secondDeg}deg)`;
+    document.getElementById("minute-hand").style.transform = `rotate(${minuteDeg}deg)`;
+    document.getElementById("hour-hand").style.transform = `rotate(${hourDeg}deg)`;
+}
+
+setInterval(setClock, 1000);
+setClock();
+    </script>
+</body>
+</html>
