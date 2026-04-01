@@ -10,6 +10,8 @@
 #print(str2)
 
 #STRING INDEXING: we can access the characters of the string by using indexing, index starts from 0 to n-1 where n is the length of the string.
+
+.........
 #STRING INDEXING IS OF TWO TYPES: POSITIVE INDEXING AND NEGATIVE INDEXING
 #POSITIVE INDEXING: in positive indexing the index starts from 0 to n-1
 #NEGATIVE INDEXING: in negative indexing the index starts from -1 to -n where -1 represents the last character of the string and -n represents the first character of the string.
